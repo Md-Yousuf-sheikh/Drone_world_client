@@ -1,0 +1,105 @@
+0 verbose cli [
+0 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+0 verbose cli   'C:\\Users\\MD YOUSUF SHEIKH\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+0 verbose cli   'install',
+0 verbose cli   'firebase'
+0 verbose cli ]
+1 info using npm@8.4.1
+2 info using node@v14.15.5
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:C:\Users\MD YOUSUF SHEIKH\AppData\Roaming\npm\node_modules\npm\npmrc Completed in 10ms
+6 timing config:load:builtin Completed in 10ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:V:\React Web\Drone World\drone-world-clint-side\.npmrc Completed in 1ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:C:\Users\MD YOUSUF SHEIKH\.npmrc Completed in 1ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:C:\Users\MD YOUSUF SHEIKH\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:validate Completed in 1ms
+16 timing config:load:credentials Completed in 1ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 21ms
+19 timing npm:load:configload Completed in 21ms
+20 timing npm:load:setTitle Completed in 0ms
+21 timing config:load:flatten Completed in 6ms
+22 timing npm:load:display Completed in 9ms
+23 verbose logfile V:\React Web\Drone World\drone-world-clint-side\_logs\2022-02-12T23_13_42_548Z-debug-0.log
+24 timing npm:load:logFile Completed in 14ms
+25 timing npm:load:timers Completed in 0ms
+26 timing npm:load:configScope Completed in 0ms
+27 timing npm:load Completed in 47ms
+28 timing arborist:ctor Completed in 1ms
+29 silly logfile start cleaning logs, removing 1 files
+30 timing idealTree:init Completed in 1669ms
+31 timing idealTree:userRequests Completed in 4ms
+32 silly idealTree buildDeps
+33 silly fetch manifest firebase@*
+34 timing arborist:ctor Completed in 0ms
+35 http fetch GET 200 https://registry.npmjs.org/firebase 27962ms (cache miss)
+36 silly placeDep ROOT firebase@9.6.6 OK for: drone-world-clint-side@0.1.0 want: *
+37 silly fetch manifest @firebase/app@0.7.16
+38 silly fetch manifest @firebase/app-compat@0.1.17
+39 silly fetch manifest @firebase/app-types@0.7.0
+40 silly fetch manifest @firebase/auth@0.19.8
+41 silly fetch manifest @firebase/auth-compat@0.2.8
+42 silly fetch manifest @firebase/database@0.12.5
+43 silly fetch manifest @firebase/database-compat@0.1.5
+44 silly fetch manifest @firebase/firestore@3.4.4
+45 silly fetch manifest @firebase/firestore-compat@0.1.13
+46 silly fetch manifest @firebase/functions@0.7.8
+47 silly fetch manifest @firebase/functions-compat@0.1.9
+48 silly fetch manifest @firebase/installations@0.5.5
+49 silly fetch manifest @firebase/messaging@0.9.8
+50 silly fetch manifest @firebase/messaging-compat@0.1.8
+51 silly fetch manifest @firebase/polyfill@0.3.36
+52 silly fetch manifest @firebase/storage@0.9.2
+53 silly fetch manifest @firebase/storage-compat@0.1.10
+54 silly fetch manifest @firebase/performance@0.5.5
+55 silly fetch manifest @firebase/performance-compat@0.1.5
+56 silly fetch manifest @firebase/remote-config@0.3.4
+57 silly fetch manifest @firebase/remote-config-compat@0.1.5
+58 silly fetch manifest @firebase/analytics@0.7.5
+59 silly fetch manifest @firebase/analytics-compat@0.1.6
+60 silly fetch manifest @firebase/app-check@0.5.3
+61 silly fetch manifest @firebase/app-check-compat@0.2.3
+62 silly fetch manifest @firebase/util@1.4.3
+63 http fetch GET 200 https://registry.npmjs.org/@firebase%2fmessaging-compat 9168ms (cache miss)
+64 http fetch GET 200 https://registry.npmjs.org/@firebase%2ffirestore-compat 10595ms (cache miss)
+65 http fetch GET 200 https://registry.npmjs.org/@firebase%2fapp-compat 17075ms (cache miss)
+66 http fetch GET 200 https://registry.npmjs.org/@firebase%2fstorage-compat 27962ms (cache miss)
+67 http fetch GET 200 https://registry.npmjs.org/@firebase%2fdatabase-compat 31936ms (cache miss)
+68 http fetch GET 200 https://registry.npmjs.org/@firebase%2fperformance-compat 48053ms (cache miss)
+69 http fetch GET 200 https://registry.npmjs.org/@firebase%2fauth-compat 62073ms (cache miss)
+70 http fetch GET 200 https://registry.npmjs.org/@firebase%2fremote-config-compat 71901ms (cache miss)
+71 http fetch GET 200 https://registry.npmjs.org/@firebase%2fapp-check-compat 96067ms (cache miss)
+72 http fetch GET 200 https://registry.npmjs.org/@firebase%2fapp-check 109201ms (cache miss)
+73 http fetch GET 200 https://registry.npmjs.org/@firebase%2fperformance 145591ms (cache miss)
+74 http fetch GET 200 https://registry.npmjs.org/@firebase%2finstallations 150529ms (cache miss)
+75 http fetch GET 200 https://registry.npmjs.org/@firebase%2fapp-types 152014ms (cache miss)
+76 http fetch GET 200 https://registry.npmjs.org/@firebase%2fstorage 165840ms (cache miss)
+77 http fetch GET 200 https://registry.npmjs.org/@firebase%2fremote-config 186483ms (cache miss)
+78 http fetch GET 200 https://registry.npmjs.org/@firebase%2fanalytics 186739ms attempt #2 (cache miss)
+79 http fetch GET 200 https://registry.npmjs.org/@firebase%2fauth 198691ms (cache miss)
+80 http fetch GET 200 https://registry.npmjs.org/@firebase%2fpolyfill 202170ms (cache miss)
+81 http fetch GET 200 https://registry.npmjs.org/@firebase%2futil 203240ms (cache miss)
+82 http fetch GET 200 https://registry.npmjs.org/@firebase%2fapp 213766ms (cache miss)
+83 http fetch GET 200 https://registry.npmjs.org/@firebase%2ffunctions-compat 217594ms (cache miss)
+84 http fetch GET 200 https://registry.npmjs.org/@firebase%2fmessaging 241665ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/@firebase%2ffirestore 245672ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/@firebase%2fdatabase 251224ms (cache miss)
+87 timing npm Completed in 285205ms
+88 verbose unfinished npm timer command:install 1644707626670
+89 verbose unfinished npm timer reify 1644707626675
+90 verbose unfinished npm timer reify:loadTrees 1644707626710
+91 verbose unfinished npm timer idealTree 1644707626711
+92 verbose unfinished npm timer idealTree:buildDeps 1644707628386
+93 verbose unfinished npm timer idealTree:#root 1644707628387
+94 info ok
+95 error Exit handler never called!
+96 error This is an error with npm itself. Please report this error at:
+97 error     <https://github.com/npm/cli/issues>
+98 error A complete log of this run can be found in:
+98 error     V:\React Web\Drone World\drone-world-clint-side\_logs\2022-02-12T23_13_42_548Z-debug-0.log
