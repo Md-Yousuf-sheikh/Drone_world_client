@@ -13,7 +13,7 @@ const About = () => {
                 <div className='mx-auto container text-center  '>
                     <div className='text-red-500 grid gap-2 font-semibold'>
                         <span className='bg-red-500 text-center py-4 px-2 rounded mx-auto text-3xl lg:text-5xl font-semibold text-white'>ABOUT</span>
-                        <span><Link className='' to="/">Home</Link>/<Link className='text-red-400' to="/about">ABOUT</Link></span>
+                        <span className='text-gray-50'><Link className='' to="/">Home</Link>/<Link to="/about">ABOUT</Link></span>
                     </div>
                 </div>
             </div>

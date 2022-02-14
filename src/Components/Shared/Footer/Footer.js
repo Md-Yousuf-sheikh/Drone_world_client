@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-    console.log('hello');
+
     return (
         <div data-aos="fade-up"
             data-aos-anchor-placement="top-bottom">

@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../../Hooks/useAuth';
 import Login from '../../../Login/Login';
-// import { RiMoreFill } from "react-icons/ri";
+
 
 const Navigation = () => {
+    const { logOut, user } = useAuth()
     const [searchInput, setSearchInput] = useState(true);
     const [mdOptionsToggle, setMdOptionsToggle] = useState(true);
     const [OptionsToggle, setOptionsToggle] = useState(true);
-    const [showMenu, setShowMenu] = useState(false)
-    // const [showLink, setShowLink] = useState(false)
+    const [showMenu, setShowMenu] = useState(false);
     const [hideForm, setHideForm] = useState(false)
     const [headerFixed, setHeaderFixed] = useState(false)
     // handel change header
     const headerChange = () => {
-        console.log(window.scrollY);
         if (window.scrollY > 10) {
             setHeaderFixed(true)
-            console.log('true');
 
         } else {
             setHeaderFixed(false)
@@ -98,26 +97,37 @@ const Navigation = () => {
                                         </div>
                                         <div className="flex ">
                                             {/* profile */}
-                                            <button aria-label="show options" onClick={() => setOptionsToggle(!OptionsToggle)} className=" dark:text-gray-50     ">
-                                                <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
-                                                </svg>
-                                            </button>
-                                            {/* Dash board link */}
-                                            <div className={`${OptionsToggle ? "hidden" : "flex"} absolute right-0 top-20 md:top-24 z-10`}>
-                                                <button aria-label="show options" onClick={() => setOptionsToggle(!OptionsToggle)} className="mr-2 dark:text-gray-900">
-                                                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+
+                                            {
+                                                user.email && <button aria-label="show options" onClick={() => setOptionsToggle(!OptionsToggle)} className=" dark:text-gray-50     ">
+                                                    <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
                                                     </svg>
                                                 </button>
-                                                <div className='bg-gray-900 p-5  grid'>
-                                                    <Link to="/dashboard" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Dashboard</Link>
-                                                    <Link to="/account" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Account</Link>
-                                                    <Link to="/setting" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Setting</Link>
-                                                    <Link to="/help" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Help</Link>
-                                                    <button onClick={() => { setHideForm(true) }} className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Login</button>
+                                            }
+                                            {
+                                                !user.email && <button aria-label="show options" onClick={() => setHideForm(true)} className="uppercase text-gray-50 px-2 py-1 rounded   bg-red-500">
+                                                    Login
+                                                </button>
+                                            }
+
+                                            {/* Dash board link */}
+                                            {
+                                                user.email && <div className={`${OptionsToggle ? "hidden" : "flex"} absolute right-0 top-20 md:top-24 z-10`}>
+                                                    <button aria-label="show options" onClick={() => setOptionsToggle(!OptionsToggle)} className="mr-2 dark:text-gray-900">
+                                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                        </svg>
+                                                    </button>
+                                                    <div className='bg-gray-900 p-5  grid'>
+                                                        <Link to="/dashboard" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Dashboard</Link>
+                                                        <Link to="/account" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Account</Link>
+                                                        <Link to="/setting" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Setting</Link>
+                                                        <Link to="/help" className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Help</Link>
+                                                        <button onClick={logOut} className='text-white font-Roboto hover:text-red-500 hover:scale-110 transition-all delay-100 text-lg' >Log Out</button>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            }
                                             {/* profile */}
                                             <button aria-label="open menu" onClick={() => setShowMenu(true)} className="lg:hidden text-black ml-3 dark:text-white dark:hover:text-gray-300 md:hidden focus:outline-none focus:ring-2 rounded focus:ring-gray-600">
                                                 <svg className="fill-stroke" width={24} height={24} viewBox="0 0 24 24" fill="none" >

@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Account from './Components/Admin/Account/Account/Account';
 import Dashboard from './Components/Admin/Dashbord/Dashbord/Dashboard';
 import Setting from './Components/Admin/Setting/Setting/Setting';
+import AuthProvider from './Components/Context/AuthProvider/AuthProvider';
 import About from './Components/Pages/About/About/About';
 import ContactUs from './Components/Pages/Contact/Contact/ContactUs';
 import DronesEquipment from './Components/Pages/DronesEquipment/DronesEquipment/DronesEquipment';
@@ -14,7 +15,7 @@ import Shop from './Components/Pages/Shop/Shop/Shop';
 function App() {
 
   return (
-    <>
+    <AuthProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,7 +28,7 @@ function App() {
         <Route path="/setting" element={<Setting />} />
         <Route path="/account" element={<Account />} />
       </Routes>
-    </>
+    </AuthProvider>
   );
 }
 
